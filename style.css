@@ -1,0 +1,206 @@
+/* Reset and General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background: url('webpage/loginbackground.gif') no-repeat center center fixed; /* Add GIF as background */
+    background-size: cover; /* Ensure it covers the whole screen */
+    color: #f0f0f0; /* Light gray color for text */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    animation: fadeIn 3s ease-in-out; /* Subtle fade-in effect */
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(255, 255, 255, 0.8); /* Soft white background for header */
+    color: #333; /* Dark text for readability */
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid #ccc; /* Soft border for separation */
+    border-radius: 10px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50; /* Dark blue-gray color */
+}
+
+header p {
+    font-size: 1.1rem;
+    color: #7f8c8d; /* Soft gray color */
+}
+
+/* Introduction Section */
+.introduction {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-out; /* Subtle slide-up effect */
+}
+
+.introduction h2 {
+    font-size: 2rem;
+    color: #2c3e50; /* Dark blue-gray */
+    margin-bottom: 1rem;
+}
+
+.introduction p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 1rem;
+}
+
+.image-center {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    margin-top: 1rem; /* Space below 'About Me' */
+}
+
+.image-center img {
+    display: block; /* Remove inline spacing */
+}
+
+
+/* Category Section */
+.category {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 2.2rem;
+    color: #ffffff; /* Dark blue-gray */
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 2s ease-out; /* Subtle fade-in-up animation for products */
+}
+
+.product-card {
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInCard 1.5s ease-out;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.product-card .btn {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 0.6rem 1.2rem;
+    background: #f0f0f0;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background: #bdc3c7; /* Lighter gray on hover */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Future Categories Section */
+.future-categories {
+    background: #f8f9fa;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Mobile Support */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .showcase h2 {
+        font-size: 1.5rem;
+    }
+
+    .introduction h2 {
+        font-size: 1.5rem;
+    }
+
+    .product-card h3 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInCard {
+    0% { opacity: 0; transform: scale(0.95); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
